@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Batshoeneng — Home</title>
 
-  <!-- Icon library -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
   <style>
     /* --- Color theme --- */
     :root {
@@ -53,7 +50,7 @@
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(75, 0, 130, 0.5); /* royal purple tint */
+      background: rgba(75, 0, 130, 0.5);
       backdrop-filter: blur(3px);
       z-index: 1;
     }
@@ -79,9 +76,6 @@
       font-weight: bold;
       color: var(--gold);
       font-size: 1.3rem;
-      display: flex;
-      align-items: center;
-      gap: 6px;
     }
 
     .nav-links {
@@ -94,9 +88,6 @@
       color: var(--text-light);
       text-decoration: none;
       font-size: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 6px;
       transition: 0.3s;
     }
 
@@ -225,20 +216,78 @@
 
   <!-- Navbar -->
   <header>
-    <nav>
-      <div class="brand">
-        <i data-lucide="heart-handshake"></i>
-        Batshoeneng Foundation
-      </div>
-      <div class="nav-links">
-        <a href="home.html"><i data-lucide="home"></i> Home</a>
-        <a href="about.html"><i data-lucide="info"></i> About</a>
-        <a href="projects.html"><i data-lucide="folder"></i> Projects</a>
-        <a href="get-involved.html"><i data-lucide="users"></i> Get Involved</a>
-        <a href="contact.html"><i data-lucide="mail"></i> Contact</a>
-      </div>
-    </nav>
-  </header>
+  <div class="header-bg"></div>
+
+  <div class="header-content">
+    <h1>Welcome to Batshoeneng Foundation</h1>
+    <p>Empowering communities through education, youth development, and social impact. Together we build a brighter future for all.</p>
+  </div>
+</header>
+
+<style>
+  header {
+    position: relative;
+    color: gold;
+    text-align: center;
+    padding: 100px 20px;
+    overflow: hidden;
+    border-bottom: 4px solid gold;
+  }
+
+  /* 🔹 Background image with blur overlay */
+  .header-bg {
+    background: url('images/batshoeneng-logo.png') center/cover no-repeat;
+    filter: blur(12px) brightness(0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  /* Dark gradient overlay for better text contrast */
+  header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(75,0,130,0.9), rgba(106,13,173,0.8));
+    z-index: 1;
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  header h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+  }
+
+  header p {
+    font-size: 1.2em;
+    color: #fff4b2;
+  }
+
+  @media (max-width: 768px) {
+    header {
+      padding: 70px 15px;
+    }
+
+    header h1 {
+      font-size: 2em;
+    }
+
+    header p {
+      font-size: 1em;
+    }
+  }
+</style>
+
 
   <!-- Hero -->
   <section class="hero">
@@ -275,9 +324,6 @@
   </footer>
 
   <script>
-    // Lucide icons init
-    lucide.createIcons();
-
     // Year auto update
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -289,7 +335,9 @@
       slides[current].classList.remove('active');
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
-    }, 5000); // every 5 seconds
+    }, 5000);
   </script>
 </body>
 </html>
+
+
