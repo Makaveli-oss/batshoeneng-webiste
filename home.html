@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Batshoeneng — Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+     :root {
+      --accent: #5509cf;
+      --bg: #f7fafc;
+      --card: #e7d90a;
+      --text: #1a202c;
+    }
+    body { margin:0; font-family:Inter, system-ui, Arial; background:var(--bg); color:var(--text); }
+    header { background:var(--card); box-shadow:0 1px 6px rgba(0,0,0,0.06); }
+    .container { max-width:1000px; margin:0 auto; padding:16px; }
+    nav { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+    .brand { font-weight:700; color:var(--accent); font-size:1.1rem; }
+    .nav-links { margin-left:auto; display:flex; gap:10px; }
+    a.button {
+      text-decoration:none; padding:8px 12px; border-radius:8px; background:transparent; color:var(--text);
+      border:1px solid transparent;
+    }
+    a.button:hover { transform:translateY(-1px); }
+    a.primary { background:var(--accent); color:white; border-color:var(--accent); }
+    main { padding:28px 16px; }
+    .hero {
+      background:linear-gradient(90deg, rgba(43,108,176,0.08), rgba(43,108,176,0.02));
+      border-radius:12px; padding:28px; display:flex; gap:20px; align-items:center;
+      flex-wrap:wrap;
+    }
+    .hero h1 { margin:0 0 8px 0; font-size:1.8rem; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:18px; }
+    .card { background:var(--card); padding:16px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.04); }
+    footer { text-align:center; padding:20px 0; color:#555; font-size:0.9rem; }
+    @media (max-width:520px){ .nav-links{width:100%; justify-content:space-between;} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Batshoeneng Foundation</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  
+    <main class="container">
+    <section class="hero">
+      <div style="flex:1; min-width:220px;">
+        <h1>Welcome to Batshoeneng</h1>
+        <p style="margin:0 0 12px 0;">We build community programs that uplift youth and strengthen neighborhoods. Explore our projects, learn how to help, or get in touch.</p>
+        <p style="margin:0;">
+          <a class="button primary" href="get-involved.html">Get Involved</a>
+          <a class="button" href="projects.html">See Projects</a>
+        </p>
+      </div>
+      <div style="min-width:200px; text-align:right;">
+        <!-- simple visual placeholder -->
+        <div style="width:160px; height:100px; background:linear-gradient(45deg,#dbeafe,#f0f9ff); border-radius:12px; display:inline-block; box-shadow:0 4px 12px rgba(43,108,176,0.12);"></div>
+      </div>
+    </section>
+
+    <section style="margin-top:18px;">
+      <h2>Quick Links</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>About</h3>
+          <p>Who we are and why we do it. <a href="about.html">Read more →</a></p>
+        </div>
+        <div class="card">
+          <h3>Projects</h3>
+          <p>Current programmes, stories and impact. <a href="projects.html">Explore →</a></p>
+        </div>
+        <div class="card">
+          <h3>Get Involved</h3>
+          <p>Volunteer, donate, or partner with us. <a href="get-involved.html">Join us →</a></p>
+        </div>
+        <div class="card">
+          <h3>Contact</h3>
+          <p>Questions or requests? <a href="contact.html">Get in touch →</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+   
+
+  <footer>
+    <p>© <span id="year"></span> Batshoeneng Foundation</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
