@@ -4,31 +4,40 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Page Name — Batshoeneng</title>
-  style>body{font-family:Inter,Arial;margin:0;padding:18px;max-width:900px;margin:auto;color:#111}</style>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Page Name</h1>
-    <nav>
-      <a href="home.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="get-involved.html">Get Involved</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <p>This is the Page Name content.</p>
-  </main>
+  <style>
+    body {
+      font-family: Inter, Arial;
+      margin: 0;
+      padding: 18px;
+      max-width: 900px;
+      margin: auto;
+      color: #111;
+    }
 
-  <footer>
-    <p>© <span id="year"></span> Batshoeneng Foundation</p>
-  </footer>
+    /* The sidepanel menu */
+    .sidepanel {
+      height: 100%; /* Full height */
+      width: 0; /* Start hidden */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Stay on top */
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden; /* Disable horizontal scroll */
+      transition: 0.4s; /* Animation */
+      padding-top: 60px;
+    }
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+    /* Links inside sidepanel */
+    .sidepanel a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    /* Hover effect */
+    .sidepanel
